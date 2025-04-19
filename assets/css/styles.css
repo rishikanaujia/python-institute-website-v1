@@ -1,0 +1,189 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* Base Styles */
+:root {
+  color-scheme: light;
+}
+
+/* Custom Element Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Roboto, sans-serif, Inter, system-ui, sans-serif;
+}
+
+body {
+  font-family: Open Sans, sans-serif, Inter, system-ui, sans-serif;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only.focus:not-sr-only {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  padding: 1rem;
+  background-color: white;
+  color: black;
+}
+
+/* Dark Mode Support */
+.dark body {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+/* Header Styles */
+#header {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+#mobile-menu {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hero Section */
+.hero-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Feature Cards */
+.feature-card {
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Course Tabs */
+.course-tab {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.course-card {
+  transition: box-shadow 0.3s ease;
+}
+
+/* Certification Cards */
+.certification-card {
+  transition: box-shadow 0.3s ease;
+}
+
+/* Roadmap */
+.roadmap-step {
+  position: relative;
+}
+
+.roadmap-connector {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #4584b6;
+}
+
+/* Exam Tabs */
+.tab-content {
+  transition: all 0.3s ease;
+}
+
+/* FAQ Accordion */
+.faq-question {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-question[aria-expanded="true"] + .faq-answer {
+  max-height: 1000px;
+}
+
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+
+.faq-question[aria-expanded="true"] .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* Contact Form */
+.form-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+/* Back to Top Button */
+#back-to-top {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Python-specific Branding Colors */
+.text-python-blue {
+  color: #4584b6;
+}
+
+.bg-python-blue {
+  background-color: #4584b6;
+}
+
+.hover\:bg-python-blue-dark:hover {
+  background-color: #3a71a1;
+}
+
+.text-python-yellow {
+  color: #ffde57;
+}
+
+.bg-python-yellow {
+  background-color: #ffde57;
+}
+
+.border-python-blue {
+  border-color: #4584b6;
+}
+
+.border-python-yellow {
+  border-color: #ffde57;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .roadmap-connector {
+    display: none;
+  }
+
+  .roadmap-step {
+    margin-bottom: 2rem;
+  }
+}
+
+/* This file complements Tailwind styles and should be used with the tailwind.config.js */
