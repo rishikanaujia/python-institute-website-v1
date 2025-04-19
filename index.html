@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <meta name="description" content="Get certified in Python programming with Python Institute's comprehensive courses and globally recognized certifications. From beginner to professional level Python training and certification.">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="">
+
+      <title>Python Institute - Professional Python Certification & Training Courses</title>
+
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+      <!-- Tailwind CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="config/tailwind.config.js"></script>
+
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Alpine.js for interactive elements -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+
+      <!-- Chart libraries -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content"
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Include header component -->
+      <!-- Placeholder for server-side include: header.html -->
+      <!-- For static HTML, you could use JavaScript to load this dynamically -->
+      <div id="header-container">
+         <!-- Header content will be loaded here -->
+      </div>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative h-full">
+        <!-- Include hero section -->
+        <div id="hero-container">
+           <!-- Hero content will be loaded here -->
+        </div>
+
+        <!-- Other sections would be included here -->
+        <!-- For demonstration purposes, we'll note where they would go -->
+
+        <!-- Why Python Section -->
+        <div id="why-python-container">
+           <!-- why-python.html content would go here -->
+        </div>
+
+        <!-- Courses Section -->
+        <div id="courses-container">
+           <!-- courses.html content would go here -->
+        </div>
+
+        <!-- Certifications Section -->
+        <div id="certifications-container">
+           <!-- certifications.html content would go here -->
+        </div>
+
+        <!-- Roadmap Section -->
+        <div id="roadmap-container">
+           <!-- roadmap.html content would go here -->
+        </div>
+
+        <!-- Exam Information Section -->
+        <div id="exam-info-container">
+           <!-- exam-info.html content would go here -->
+        </div>
+
+        <!-- Testimonials Section -->
+        <div id="testimonials-container">
+           <!-- testimonials.html content would go here -->
+        </div>
+
+        <!-- FAQ Section -->
+        <div id="faq-container">
+           <!-- faq.html content would go here -->
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact-container">
+           <!-- contact.html content would go here -->
+        </div>
+      </main>
+
+      <!-- Include footer component -->
+      <div id="footer-container">
+         <!-- Footer content will be loaded here -->
+      </div>
+
+      <!-- JavaScript Files -->
+      <!-- Load components -->
+      <script>
+        // Simple function to load HTML components
+        async function loadComponent(containerId, filePath) {
+          try {
+            const response = await fetch(filePath);
+            if (!response.ok) throw new Error(`Failed to load ${filePath}`);
+            const html = await response.text();
+            document.getElementById(containerId).innerHTML = html;
+          } catch (error) {
+            console.error(`Error loading component: ${error.message}`);
+          }
+        }
+
+        // Load all components when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+          // Load main structure components
+          loadComponent('header-container', 'components/header.html');
+          loadComponent('hero-container', 'sections/hero.html');
+          loadComponent('footer-container', 'components/footer.html');
+
+          // Load content sections
+          // These would be uncommented as you create each section file
+          // loadComponent('why-python-container', 'sections/why-python.html');
+          // loadComponent('courses-container', 'sections/courses.html');
+          // loadComponent('certifications-container', 'sections/certifications.html');
+          // loadComponent('roadmap-container', 'sections/roadmap.html');
+          // loadComponent('exam-info-container', 'sections/exam-info.html');
+          // loadComponent('testimonials-container', 'sections/testimonials.html');
+          // loadComponent('faq-container', 'sections/faq.html');
+          // loadComponent('contact-container', 'sections/contact.html');
+        });
+      </script>
+
+      <!-- Core JavaScript functionality -->
+      <script src="assets/js/main.js"></script>
+      <script src="assets/js/mobile-menu.js"></script>
+      <script src="assets/js/course-tabs.js"></script>
+      <script src="assets/js/exam-tabs.js"></script>
+      <script src="assets/js/faq-toggle.js"></script>
+   </body>
+</html>
